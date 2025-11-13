@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="">
+    <test name="">
+        <classes>
+            <class name="Login">
+                <methods>
+                    <include name="standerUser" />
+                    <include name="addToCart" />
+                    <include name="checkOut" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
