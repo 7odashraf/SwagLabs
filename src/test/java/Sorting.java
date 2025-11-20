@@ -1,18 +1,39 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class Sorting extends LoginTest {
+
+
+public class Sorting extends BaseClass {
+    @BeforeMethod
+    public void setup() {
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.saucedemo.com/");
+    }
+
+    @AfterMethod
+    public void teardown(){
+        driver.quit();
+    }
+
+
+    public void Login() {
+        username().sendKeys("standard_user");
+        password().sendKeys("secret_sauce");
+        LoginBtn().click();
+    }
+
+
+
     @Test(priority = 5)
     public void sortingByNameAtoZ() {
-        testValidLogin();
+        Login();
         List<String> Items_names_Before_Sort = getItemNames();
         sortAtoZ().click();
         List<String> Items_names_After_Sort = getItemNames();
@@ -24,7 +45,7 @@ public class Sorting extends LoginTest {
 
     @Test(priority = 6)
     public void sortingByNameZtoA() {
-        testValidLogin();
+        Login();
         List<String> Items_names_Before_Sort = getItemNames();
         sortZtoA().click();
         List<String> Items_names_After_Sort = getItemNames();
@@ -36,7 +57,7 @@ public class Sorting extends LoginTest {
 
     @Test(priority = 7)
     public void sortingByPriceLowtoHigh() {
-        testValidLogin();
+        Login();
         List<Double> Items_prices_Before_Sort = getItemPrices();
         Items_prices_Before_Sort.forEach(e -> System.out.println("Before: " + e));
         sortLowtoHigh().click();
@@ -52,14 +73,12 @@ public class Sorting extends LoginTest {
 
     @Test(priority = 8)
     public void sortingByPriceHightoLow() {
-        testValidLogin();
+        Login();
         List<Double> Items_prices_Before_Sort = getItemPrices();
-        Items_prices_Before_Sort.forEach(e -> System.out.println("Before: " + e));
         sortHightoLow().click();
         List<Double> Items_prices_After_Sort = getItemPrices();
 
         Collections.sort(Items_prices_Before_Sort, Collections.reverseOrder());
-        Items_prices_After_Sort.forEach(e -> System.out.println("After: " + e));
         Assert.assertEquals(sortHightoLow().getText(), "Price (high to low)");
         Assert.assertEquals(Items_prices_Before_Sort, Items_prices_After_Sort);
 

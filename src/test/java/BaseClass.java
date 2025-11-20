@@ -91,7 +91,7 @@ public class BaseClass {
 
 
     @BeforeTest
-    public void prepare() {
+    public void setup() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");

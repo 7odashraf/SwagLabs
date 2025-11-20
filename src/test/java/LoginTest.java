@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 public class LoginTest extends BaseClass{
 
     @BeforeMethod
-    public void prepare() {
+    public void setup() {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
@@ -24,7 +24,6 @@ public class LoginTest extends BaseClass{
         LoginBtn().click();
 
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
-//        Assert.assertNotEquals("Epic sadface: Username and password do not match any user in this service", error_Message_Test());
     }
 
     @Test(priority = 1)

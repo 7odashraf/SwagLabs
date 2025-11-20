@@ -1,16 +1,10 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class Login extends BaseClass{
+public class E2E extends BaseClass{
 
 
     @Test
@@ -26,13 +20,16 @@ public class Login extends BaseClass{
     @Test(dependsOnMethods = "standerUser")
     public void addToCart(){
         item_1_addToCart_Btn().click();
-        item_2_addToCart_Btn().click();
-        item_5_addToCart_Btn().click();
-        item_6_addToCart_Btn().click();
-
-
         Assert.assertTrue(item_1_Remove_Btn().isDisplayed());
 
+        item_2_addToCart_Btn().click();
+        Assert.assertTrue(item_2_Remove_Btn().isDisplayed());
+
+        item_5_addToCart_Btn().click();
+        Assert.assertTrue(item_5_Remove_Btn().isDisplayed());
+
+        item_6_addToCart_Btn().click();
+        Assert.assertTrue(item_6_Remove_Btn().isDisplayed());
 
     }
 
