@@ -1,9 +1,13 @@
+package tests;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +17,37 @@ public class BaseClass {
 
     WebDriver driver;
 
+    @DataProvider(name = "loginData")
+    public Object[][] loginDataProvider() {
+        return new Object[][]{
+                // Standard user
+                {new User("standard_user", "secret_sauce", null, "John", "Doe", "12345")},
+
+                // Invalid user
+                {new User("invalid_user", "invalid_user", "Epic sadface: Username and password do not match any user in this service", "Jane", "Smith", "54321")},
+
+                // Empty username
+                {new User("", "secret_sauce", "Epic sadface: Username is required", "Robert", "Johnson", "11223")},
+
+                // Empty password
+                {new User("standard_user", "", "Epic sadface: Password is required", "Emily", "Davis", "22334") },
+
+                // User4 with empty password (edge case)
+                { new User("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out.", "Emily", "Davis", "22334") },
+
+                // Problem user
+                { new User("problem_user", "secret_sauce", null, "Chris", "Lee", "33445") },
+
+                // Performance glitch user
+                { new User("performance_glitch_user", "secret_sauce", null, "Natalie", "Wilson", "00000") },
+
+                // Error user
+                { new User("error_user", "secret_sauce", null, "Michael", "Taylor", "44556") },
+
+                // Visual user
+                {new User("visual_user", "secret_sauce", null, "Emily", "Davis", "22334") }
+        };
+    }
 
     //some web elements
     WebElement username() { return driver.findElement(By.id("user-name")); }
@@ -23,7 +58,13 @@ public class BaseClass {
         return driver.findElement(By.id("login-button"));
     }
 
-    String error_Message_Test() { return driver.findElement(By.cssSelector("h3[data-test='error']")).getText(); }
+    String error_Message_Test() {
+        try {
+            return driver.findElement(By.cssSelector("h3[data-test='error']")).getText();
+        } catch (NoSuchElementException e) {
+            return null;
+        }
+    }
 
 
 
@@ -88,7 +129,11 @@ public class BaseClass {
                 .collect(Collectors.toList());
     }
 
-
+    public void doLogin() {
+        username().sendKeys("standard_user");
+        password().sendKeys("secret_sauce");
+        LoginBtn().click();
+    }
 
     @BeforeTest
     public void setup() {

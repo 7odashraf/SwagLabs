@@ -1,15 +1,27 @@
+package tests;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.util.Collections;
 import java.util.List;
 
+public class SortingTest extends BaseClass {
 
+    @DataProvider(name = "loginSortingData")
+    public Object[][] sortingDataProvider() {
+        return new Object[][]{
+            { "standard_user", "secret_sauce" },  // Standard user
+            { "problem_user", "secret_sauce" },  // Problem user
+            { "performance_glitch_user", "secret_sauce" },  // Performance glitch user
+            { "error_user", "secret_sauce" },  // Error user
+            { "visual_user", "secret_sauce" },  // Visual user
+        };
+    }
 
-public class Sorting extends BaseClass {
     @BeforeMethod
     public void setup() {
         driver = new FirefoxDriver();
@@ -23,17 +35,17 @@ public class Sorting extends BaseClass {
     }
 
 
-    public void Login() {
-        username().sendKeys("standard_user");
-        password().sendKeys("secret_sauce");
+    public void Login(String username, String password) {
+        username().sendKeys(username);
+        password().sendKeys(password);
         LoginBtn().click();
     }
 
 
 
-    @Test(priority = 5)
-    public void sortingByNameAtoZ() {
-        Login();
+    @Test(dataProvider = "loginSortingData")
+    public void sortingByNameAtoZ(String username, String password) {
+        Login(username, password);
         List<String> Items_names_Before_Sort = getItemNames();
         sortAtoZ().click();
         List<String> Items_names_After_Sort = getItemNames();
@@ -43,9 +55,9 @@ public class Sorting extends BaseClass {
         Assert.assertEquals(Items_names_Before_Sort, Items_names_After_Sort);
     }
 
-    @Test(priority = 6)
-    public void sortingByNameZtoA() {
-        Login();
+    @Test(dataProvider = "loginSortingData")
+    public void sortingByNameZtoA(String username, String password) {
+        Login(username,password);
         List<String> Items_names_Before_Sort = getItemNames();
         sortZtoA().click();
         List<String> Items_names_After_Sort = getItemNames();
@@ -55,25 +67,22 @@ public class Sorting extends BaseClass {
         Assert.assertEquals(Items_names_Before_Sort, Items_names_After_Sort);
     }
 
-    @Test(priority = 7)
-    public void sortingByPriceLowtoHigh() {
-        Login();
+    @Test(dataProvider = "loginSortingData")
+    public void sortingByPriceLowtoHigh(String username, String password) {
+        Login(username,password);
         List<Double> Items_prices_Before_Sort = getItemPrices();
-        Items_prices_Before_Sort.forEach(e -> System.out.println("Before: " + e));
         sortLowtoHigh().click();
         List<Double> Items_prices_After_Sort = getItemPrices();
 
         Collections.sort(Items_prices_Before_Sort);
-        Items_prices_Before_Sort.forEach(e -> System.out.println("Before2: " + e));
-        Items_prices_After_Sort.forEach(e -> System.out.println("After: " + e));
         Assert.assertEquals(sortLowtoHigh().getText(), "Price (low to high)");
         Assert.assertEquals(Items_prices_Before_Sort, Items_prices_After_Sort);
 
     }
 
-    @Test(priority = 8)
-    public void sortingByPriceHightoLow() {
-        Login();
+    @Test(dataProvider = "loginSortingData")
+    public void sortingByPriceHightoLow(String username, String password) {
+        Login(username,password);
         List<Double> Items_prices_Before_Sort = getItemPrices();
         sortHightoLow().click();
         List<Double> Items_prices_After_Sort = getItemPrices();

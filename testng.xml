@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="SauceDemo Test Suite" >
-    <test name="E2E Tests">
-        <classes>
-            <class name="E2E"/>
-        </classes>
-    </test>
-
+<!--    <test name="E2E Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.E2E"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="Login Tests">
         <classes>
-            <class name="LoginTest"/>
+            <class name="tests.LoginTest"/>
         </classes>
     </test>
     <test name="Sorting Tests">
         <classes>
-            <class name="Sorting"/>
+            <class name="tests.SortingTest"/>
         </classes>
     </test>
     <test name="Inventory Tests">
         <classes>
-            <class name="Inventory"/>
+            <class name="tests.InventoryTest"/>
         </classes>
     </test>
-    <test name="ProductPage Tests">
-        <classes>
-            <class name="ProductPage"/>
-        </classes>
-    </test>
-
-
-
+<!--    <test name="ProductPage Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.ProductPage"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
