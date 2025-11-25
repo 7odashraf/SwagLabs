@@ -1,13 +1,28 @@
-package tests;
+package tests;//package tests;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+
+
+import java.io.IOException;
+
+import java.util.List;
+
+
+
+
 public class InventoryTest extends BaseClass {
+
+    public InventoryTest() throws IOException {
+    }
 
     @BeforeMethod
     public void setup() {
@@ -20,77 +35,76 @@ public class InventoryTest extends BaseClass {
     public void teardown(){
         driver.quit();
     }
-    @DataProvider(name = "loginSortingData")
-    public Object[][] sortingDataProvider() {
-        return new Object[][]{
-                { "standard_user", "secret_sauce" },  // Standard user
-                { "problem_user", "secret_sauce" },  // Problem user
-                { "performance_glitch_user", "secret_sauce" },  // Performance glitch user
-                { "error_user", "secret_sauce" },  // Error user
-                { "visual_user", "secret_sauce" },  // Visual user
-        };
-    }
-    public void Login(String username, String password) {
-        username().sendKeys(username);
-        password().sendKeys(password);
-        LoginBtn().click();
-    }
+//    @DataProvider(name = "loginSortingData")
+//    public Object[][] sortingDataProvider() {
+//        return new Object[][]{
+//                { "standard_user", "secret_sauce" },  // Standard user
+//                { "problem_user", "secret_sauce" },  // Problem user
+//                { "performance_glitch_user", "secret_sauce" },  // Performance glitch user
+//                { "error_user", "secret_sauce" },  // Error user
+//                { "visual_user", "secret_sauce" },  // Visual user
+//        };
+//    }
+//    public void Login(String username, String password){
+//        username().sendKeys(username);
+//        password().sendKeys(password);
+//        LoginBtn().click();
+//    }
 
     @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem1(String username, String password) {
+    public void test_Add_Remove_Item(String username, String password) throws IOException {
         Login(username, password);
 
-        item_1_addToCart_Btn().click();
-        Assert.assertTrue(item_1_Remove_Btn().isDisplayed());
+        JSONArray items = readProductListJson();
 
-        item_1_Remove_Btn().click();
-        Assert.assertTrue(item_1_addToCart_Btn().isDisplayed());
+        for (int i = 0; i < items.length(); i++) {
+            String addToCartId = items.getJSONObject(i).getString("add_to_cart_id");
+            String RemoveFromCartId = items.getJSONObject(i).getString("remove_from_cart_id");
+
+            WebElement addBtn =driver.findElement(By.id(addToCartId));
+            addBtn.click();
+
+            List<WebElement> removeBtnList = driver.findElements(By.id(RemoveFromCartId));
+            Assert.assertTrue(removeBtnList.size() > 0, items.getJSONObject(i).getString("name")+": add to cart bottun unclickable.");
+
+            WebElement removeBtn =driver.findElement(By.id(RemoveFromCartId));
+            removeBtn.click();
+
+            List<WebElement> addBtnList = driver.findElements(By.id(addToCartId));
+            Assert.assertTrue(addBtnList.size() > 0, items.getJSONObject(i).getString("name")+": remove form cart bottun unclickable.");
+
+        }
     }
     @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem2(String username, String password) {
+    public void testInventoryItems(String username, String password) throws IOException {
         Login(username, password);
 
-        item_2_addToCart_Btn().click();
-        Assert.assertTrue(item_2_Remove_Btn().isDisplayed());
+        JSONArray items = readProductListJson();
 
-        item_2_Remove_Btn().click();
-        Assert.assertTrue(item_2_addToCart_Btn().isDisplayed());
-    }
-    @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem3(String username, String password) {
-        Login(username, password);
-        item_3_addToCart_Btn().click();
-        Assert.assertTrue(item_3_Remove_Btn().isDisplayed());
 
-        item_3_Remove_Btn().click();
-        Assert.assertTrue(item_3_addToCart_Btn().isDisplayed());
-    }
-    @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem4(String username, String password) {
-        Login(username, password);
-        item_4_addToCart_Btn().click();
-        Assert.assertTrue(item_4_Remove_Btn().isDisplayed());
+        // الحصول على جميع العناصر في قائمة المنتجات
+        List<WebElement> inventoryItems = driver.findElements(By.cssSelector(".inventory_item"));
 
-        item_4_Remove_Btn().click();
-        Assert.assertTrue(item_4_addToCart_Btn().isDisplayed());
-    }
-    @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem5(String username, String password) {
-        Login(username, password);
-        item_5_addToCart_Btn().click();
-        Assert.assertTrue(item_5_Remove_Btn().isDisplayed());
+        // التكرار عبر العناصر المتاحة في الصفحة
+        for (int i = 0; i < inventoryItems.size(); i++) {
+            WebElement item = inventoryItems.get(i);
 
-        item_5_Remove_Btn().click();
-        Assert.assertTrue(item_5_addToCart_Btn().isDisplayed());
-    }
-    @Test(dataProvider = "loginSortingData")
-    public void testAddRemoveItem6(String username, String password) {
-        Login(username, password);
-        item_6_addToCart_Btn().click();
-        Assert.assertTrue(item_6_Remove_Btn().isDisplayed());
+            // الحصول على العناصر المختلفة من الـ HTML
+            String itemName = item.findElement(By.cssSelector(".inventory_item_name")).getText();
+            String itemDescription = item.findElement(By.cssSelector(".inventory_item_desc")).getText();
+            String itemPrice = item.findElement(By.cssSelector(".inventory_item_price")).getText();
 
-        item_6_Remove_Btn().click();
-        Assert.assertTrue(item_6_addToCart_Btn().isDisplayed());
+            // استخراج البيانات المتوقعة من JSON باستخدام `getJSONObject` و `getString`
+            JSONObject product = items.getJSONObject(i);
+            String expectedName = product.getString("name");
+            String expectedDescription = product.getString("description");
+            String expectedPrice = product.getString("price");
+
+            // التحقق من القيم
+            Assert.assertEquals(itemName, expectedName, "The name of the product is incorrect for item " + (i + 1));
+            Assert.assertEquals(itemDescription, expectedDescription, "The description of the product is incorrect for item " + (i + 1));
+            Assert.assertEquals(itemPrice, expectedPrice, "The price of the product is incorrect for item " + (i + 1));
+        }
     }
 
 }

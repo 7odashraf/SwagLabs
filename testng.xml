@@ -21,9 +21,24 @@
             <class name="tests.InventoryTest"/>
         </classes>
     </test>
-<!--    <test name="ProductPage Tests">-->
+    <test name="ProductPage Tests">
+        <classes>
+            <class name="tests.ProductPageTest"/>
+        </classes>
+    </test>
+<!--    <test name="Cart Tests">-->
 <!--        <classes>-->
-<!--            <class name="tests.ProductPage"/>-->
+<!--            <class name="tests.CartTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Checkout Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.CheckoutInfoTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Overview Tests">-->
+<!--        <classes>-->
+<!--            <class name="tests.OverviewTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 </suite>

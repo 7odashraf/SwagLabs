@@ -4,23 +4,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.util.Collections;
 import java.util.List;
 
 public class SortingTest extends BaseClass {
 
-    @DataProvider(name = "loginSortingData")
-    public Object[][] sortingDataProvider() {
-        return new Object[][]{
-            { "standard_user", "secret_sauce" },  // Standard user
-            { "problem_user", "secret_sauce" },  // Problem user
-            { "performance_glitch_user", "secret_sauce" },  // Performance glitch user
-            { "error_user", "secret_sauce" },  // Error user
-            { "visual_user", "secret_sauce" },  // Visual user
-        };
-    }
 
     @BeforeMethod
     public void setup() {
@@ -35,11 +24,6 @@ public class SortingTest extends BaseClass {
     }
 
 
-    public void Login(String username, String password) {
-        username().sendKeys(username);
-        password().sendKeys(password);
-        LoginBtn().click();
-    }
 
 
 
