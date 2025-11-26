@@ -7,11 +7,14 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,7 +25,7 @@ public class BaseClass {
 
     @BeforeMethod
     public void setup() {
-        driver = new FirefoxDriver();
+        driver = new FirefoxDriver();      // Edit this with your available Drive
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
     }
@@ -66,7 +69,7 @@ public class BaseClass {
         };
     }
     @DataProvider(name = "ValidLoginData")
-    public Object[][] sortingDataProvider() {
+    public Object[][] validDataProvider() {
         return new Object[][]{
                 { "standard_user", "secret_sauce" },  // Standard user
                 { "problem_user", "secret_sauce" },  // Problem user
@@ -145,7 +148,19 @@ public class BaseClass {
     WebElement firstname_Input(){return driver.findElement(By.id("first-name"));}
     WebElement lastname_Input(){return driver.findElement(By.id("last-name"));}
     WebElement zip_Code_Input(){return driver.findElement(By.id("postal-code"));}
-    WebElement continue_CheckOut_Btn(){ return driver.findElement(By.id("continue"));}
+    String getErrorMessage() {
+        if (driver.findElements(By.cssSelector("div.error-message-container.error h3[data-test='error']")).size() > 0) {
+            return driver.findElement(By.cssSelector("h3[data-test='error']")).getText();
+        } else {
+            return "";
+        }
+    }    WebElement continue_CheckOut_Btn(){ return driver.findElement(By.id("continue"));}
+    public JSONArray readCheckoutDataJson() throws IOException {
+        String json = new String(Files.readAllBytes(Paths.get("./src/test/java/tests/CheckoutData.json")));
+        JSONObject obj = new JSONObject(json);
+        return obj.getJSONArray("testCases");
+    }
+
 
     // Locators for Overview Page
     WebElement finish_Btn(){ return driver.findElement(By.id("finish"));}
@@ -154,7 +169,8 @@ public class BaseClass {
 
     // Locators for Logout
     WebElement logout_Btn(){ return driver.findElement(By.id("logout_sidebar_link"));}
-    WebElement menu_Btn(){ return driver.findElement(By.id("react-burger-menu-btn"));}
+    WebElement menu_Btn(){ WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated (By.id("react-burger-menu-btn")));}
 
 
     public void Login(String username, String password){

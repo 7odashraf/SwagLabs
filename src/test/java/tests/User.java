@@ -18,7 +18,7 @@ public class User {
         this.zipCode = zipCode;
     }
 
-    // Getters and Setters (يمكن إضافة هذه الحقول حسب الحاجة)
+    // Getters and Setters
     public String getUsername() {
         return username;
     }

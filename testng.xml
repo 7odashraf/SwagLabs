@@ -26,11 +26,11 @@
             <class name="tests.CartTest"/>
         </classes>
     </test>
-<!--    <test name="Checkout Tests">-->
-<!--        <classes>-->
-<!--            <class name="tests.CheckoutInfoTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Checkout Tests">
+        <classes>
+            <class name="tests.CheckoutInfoTest"/>
+        </classes>
+    </test>
 <!--    <test name="Overview Tests">-->
 <!--        <classes>-->
 <!--            <class name="tests.OverviewTest"/>-->
