@@ -18,19 +18,7 @@ import java.util.List;
 
 public class InventoryTest extends BaseClass {
 
-    @BeforeMethod
-    public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @AfterMethod
-    public void teardown(){
-        driver.quit();
-    }
-
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void test_Add_Remove_Item(String username, String password) throws IOException {
         Login(username, password);
 
@@ -54,7 +42,7 @@ public class InventoryTest extends BaseClass {
 
         }
     }
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void testInventoryItems(String username, String password) throws IOException {
         Login(username, password);
 

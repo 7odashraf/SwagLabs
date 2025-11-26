@@ -7,9 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,14 +20,14 @@ public class BaseClass {
 
     WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod
     public void setup() {
-        driver = new FirefoxDriver(); // FirefoxDriver
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterTest
+    @AfterMethod
     public void teardown(){
         driver.quit();
     }
@@ -67,7 +65,7 @@ public class BaseClass {
                 {new User("visual_user", "secret_sauce", null, "Emily", "Davis", "22334") }
         };
     }
-    @DataProvider(name = "loginSortingData")
+    @DataProvider(name = "ValidLoginData")
     public Object[][] sortingDataProvider() {
         return new Object[][]{
                 { "standard_user", "secret_sauce" },  // Standard user

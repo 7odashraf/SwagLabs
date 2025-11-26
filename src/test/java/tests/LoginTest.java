@@ -6,19 +6,6 @@ import org.testng.annotations.*;
 
 public class LoginTest extends BaseClass {
 
-    @BeforeMethod
-    public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @AfterMethod
-    public void teardown(){
-        driver.quit();
-    }
-
-
     @Test(dataProvider = "loginData")
     public void testLogin(User user) {
         username().sendKeys(user.username);

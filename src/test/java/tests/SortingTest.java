@@ -13,23 +13,7 @@ import java.util.List;
 public class SortingTest extends BaseClass {
 
 
-    @BeforeMethod
-    public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @AfterMethod
-    public void teardown(){
-        driver.quit();
-    }
-
-
-
-
-
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void sortingByNameAtoZ(String username, String password) {
         Login(username, password);
         List<String> Items_names_Before_Sort = getItemNames();
@@ -47,7 +31,7 @@ public class SortingTest extends BaseClass {
         Assert.assertEquals(Items_names_Before_Sort, Items_names_After_Sort);
     }
 
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void sortingByNameZtoA(String username, String password) {
         Login(username,password);
         List<String> Items_names_Before_Sort = getItemNames();
@@ -65,7 +49,7 @@ public class SortingTest extends BaseClass {
         Assert.assertEquals(Items_names_Before_Sort, Items_names_After_Sort);
     }
 
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void sortingByPriceLowtoHigh(String username, String password) {
         Login(username,password);
         List<Double> Items_prices_Before_Sort = getItemPrices();
@@ -84,7 +68,7 @@ public class SortingTest extends BaseClass {
 
     }
 
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void sortingByPriceHightoLow(String username, String password) {
         Login(username,password);
         List<Double> Items_prices_Before_Sort = getItemPrices();

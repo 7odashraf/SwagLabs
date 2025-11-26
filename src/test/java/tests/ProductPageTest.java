@@ -18,22 +18,7 @@ import java.util.List;
 
 public class ProductPageTest extends BaseClass{
 
-    @BeforeMethod
-    public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @AfterMethod
-    public void teardown(){
-        driver.quit();
-    }
-
-
-
-
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void validateProduct_Name_Price_Description(String username, String password) throws IOException {
         Login(username, password);
 
@@ -77,7 +62,7 @@ public class ProductPageTest extends BaseClass{
         }
     }
 
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void validateProductImages(String username, String password) throws IOException {
         Login(username, password);
 
@@ -112,7 +97,7 @@ public class ProductPageTest extends BaseClass{
 
         }
     }
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void test_Add_Remove_Item(String username, String password) throws IOException {
         Login(username, password);
 

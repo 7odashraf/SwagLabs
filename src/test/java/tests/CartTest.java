@@ -15,18 +15,6 @@ import java.util.List;
 
 public class CartTest extends BaseClass {
 
-    @BeforeMethod
-    public void setup() {
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/");
-    }
-
-    @AfterMethod
-    public void teardown() {
-        driver.quit();
-    }
-
 // ========================== Test: Add and Remove Item from Cart ==============================
 
 // 1. Verify cart badge increases by 1 after adding an item to the cart
@@ -37,7 +25,7 @@ public class CartTest extends BaseClass {
 
 
 
-    @Test(dataProvider = "loginSortingData")
+    @Test(dataProvider = "ValidLoginData")
     public void verifyAddRemoveItemFromCart(String username, String password) throws IOException {
         Login(username, password);
 
