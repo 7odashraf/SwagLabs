@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="SauceDemo Test Suite" >
-<!--    <test name="E2E Tests">-->
-<!--        <classes>-->
-<!--            <class name="tests.E2E"/>-->
-<!--        </classes>-->
-<!--    </test>-->
     <test name="Login Tests">
         <classes>
             <class name="tests.LoginTest"/>
@@ -26,11 +21,11 @@
             <class name="tests.ProductPageTest"/>
         </classes>
     </test>
-<!--    <test name="Cart Tests">-->
-<!--        <classes>-->
-<!--            <class name="tests.CartTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Cart Tests">
+        <classes>
+            <class name="tests.CartTest"/>
+        </classes>
+    </test>
 <!--    <test name="Checkout Tests">-->
 <!--        <classes>-->
 <!--            <class name="tests.CheckoutInfoTest"/>-->

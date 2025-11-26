@@ -125,7 +125,22 @@ public class BaseClass {
 
 
     // Locators for Cart Page
+    public int getCartBadgeNumber() {
+        List<WebElement> badgeElements = driver.findElements(By.className("shopping_cart_badge"));
+        if (badgeElements.isEmpty()) { return 0;}   // shopping cart Empty
+
+        return Integer.parseInt(badgeElements.get(0).getText());
+    }
+    public WebElement getLastItemFromCart() {
+        List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_item"));
+
+        if (cartItems.isEmpty()) {
+            throw new NoSuchElementException("The cart is empty, no items to retrieve.");
+        }
+        return cartItems.get(cartItems.size() - 1);
+    }
     WebElement shopping_Cart_Btn(){ return driver.findElement(By.cssSelector("a.shopping_cart_link"));}
+    WebElement continue_Shopping_Btn(){ return driver.findElement(By.id("continue-shopping"));}
     WebElement checkOut_Btn(){ return driver.findElement(By.id("checkout"));}
 
     // Locators for Checkout Page
