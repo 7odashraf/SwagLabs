@@ -10,19 +10,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
-
 import java.io.IOException;
-
 import java.util.List;
 
 
 
 
 public class InventoryTest extends BaseClass {
-
-    public InventoryTest() throws IOException {
-    }
 
     @BeforeMethod
     public void setup() {
@@ -35,21 +29,6 @@ public class InventoryTest extends BaseClass {
     public void teardown(){
         driver.quit();
     }
-//    @DataProvider(name = "loginSortingData")
-//    public Object[][] sortingDataProvider() {
-//        return new Object[][]{
-//                { "standard_user", "secret_sauce" },  // Standard user
-//                { "problem_user", "secret_sauce" },  // Problem user
-//                { "performance_glitch_user", "secret_sauce" },  // Performance glitch user
-//                { "error_user", "secret_sauce" },  // Error user
-//                { "visual_user", "secret_sauce" },  // Visual user
-//        };
-//    }
-//    public void Login(String username, String password){
-//        username().sendKeys(username);
-//        password().sendKeys(password);
-//        LoginBtn().click();
-//    }
 
     @Test(dataProvider = "loginSortingData")
     public void test_Add_Remove_Item(String username, String password) throws IOException {
@@ -82,25 +61,20 @@ public class InventoryTest extends BaseClass {
         JSONArray items = readProductListJson();
 
 
-        // الحصول على جميع العناصر في قائمة المنتجات
         List<WebElement> inventoryItems = driver.findElements(By.cssSelector(".inventory_item"));
 
-        // التكرار عبر العناصر المتاحة في الصفحة
         for (int i = 0; i < inventoryItems.size(); i++) {
             WebElement item = inventoryItems.get(i);
 
-            // الحصول على العناصر المختلفة من الـ HTML
             String itemName = item.findElement(By.cssSelector(".inventory_item_name")).getText();
             String itemDescription = item.findElement(By.cssSelector(".inventory_item_desc")).getText();
             String itemPrice = item.findElement(By.cssSelector(".inventory_item_price")).getText();
 
-            // استخراج البيانات المتوقعة من JSON باستخدام `getJSONObject` و `getString`
             JSONObject product = items.getJSONObject(i);
             String expectedName = product.getString("name");
             String expectedDescription = product.getString("description");
             String expectedPrice = product.getString("price");
 
-            // التحقق من القيم
             Assert.assertEquals(itemName, expectedName, "The name of the product is incorrect for item " + (i + 1));
             Assert.assertEquals(itemDescription, expectedDescription, "The description of the product is incorrect for item " + (i + 1));
             Assert.assertEquals(itemPrice, expectedPrice, "The price of the product is incorrect for item " + (i + 1));
