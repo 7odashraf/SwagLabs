@@ -2,10 +2,7 @@ package tests;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -140,7 +137,13 @@ public class BaseClass {
         }
         return cartItems.get(cartItems.size() - 1);
     }
-    WebElement shopping_Cart_Btn(){ return driver.findElement(By.cssSelector("a.shopping_cart_link"));}
+    WebElement shopping_Cart_Btn(){
+        // adding JavascriptExecutor to handle unclickable element
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, 0);");
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.shopping_cart_link")));}
     WebElement continue_Shopping_Btn(){ return driver.findElement(By.id("continue-shopping"));}
     WebElement checkOut_Btn(){ return driver.findElement(By.id("checkout"));}
 

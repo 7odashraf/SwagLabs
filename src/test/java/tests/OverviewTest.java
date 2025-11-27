@@ -122,7 +122,7 @@ public class OverviewTest extends BaseClass{
     }
 
     @Test(dataProvider = "ValidLoginData")
-    public void testFinishProcess(String username, String password) throws IOException, InterruptedException {
+    public void testFinishProcess(String username, String password) throws IOException {
         Login(username, password);
 
         JSONArray items = readProductListJson();
