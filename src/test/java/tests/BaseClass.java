@@ -173,9 +173,10 @@ public class BaseClass {
     WebElement back_Home_Btn(){ return driver.findElement(By.id("back-to-products"));}
 
     // Locators for Logout
-    WebElement logout_Btn(){ return driver.findElement(By.id("logout_sidebar_link"));}
+    WebElement logout_Btn(){ WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logout_sidebar_link")));}
     WebElement menu_Btn(){ WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated (By.id("react-burger-menu-btn")));}
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("react-burger-menu-btn")));}
 
 
     public void Login(String username, String password){
