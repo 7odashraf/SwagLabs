@@ -31,11 +31,11 @@
             <class name="tests.CheckoutInfoTest"/>
         </classes>
     </test>
-<!--    <test name="Overview Tests">-->
-<!--        <classes>-->
-<!--            <class name="tests.OverviewTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Overview Tests">
+        <classes>
+            <class name="tests.OverviewTest"/>
+        </classes>
+    </test>
         <test name="Logout Tests">
             <classes>
                 <class name="tests.LogoutTest"/>

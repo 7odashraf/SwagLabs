@@ -41,31 +41,31 @@ public class BaseClass {
     public Object[][] loginDataProvider() {
         return new Object[][]{
                 // Standard user
-                {new User("standard_user", "secret_sauce", null, "John", "Doe", "12345")},
+                {new User("standard_user", "secret_sauce", null)},
 
                 // Invalid user
-                {new User("invalid_user", "invalid_user", "Epic sadface: Username and password do not match any user in this service", "Jane", "Smith", "54321")},
+                {new User("invalid_user", "invalid_user", "Epic sadface: Username and password do not match any user in this service")},
 
                 // Empty username
-                {new User("", "secret_sauce", "Epic sadface: Username is required", "Robert", "Johnson", "11223")},
+                {new User("", "secret_sauce", "Epic sadface: Username is required")},
 
                 // Empty password
-                {new User("standard_user", "", "Epic sadface: Password is required", "Emily", "Davis", "22334") },
+                {new User("standard_user", "", "Epic sadface: Password is required") },
 
                 // User4 with empty password (edge case)
-                { new User("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out.", "Emily", "Davis", "22334") },
+                { new User("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out.") },
 
                 // Problem user
-                { new User("problem_user", "secret_sauce", null, "Chris", "Lee", "33445") },
+                { new User("problem_user", "secret_sauce", null) },
 
                 // Performance glitch user
-                { new User("performance_glitch_user", "secret_sauce", null, "Natalie", "Wilson", "00000") },
+                { new User("performance_glitch_user", "secret_sauce", null) },
 
                 // Error user
-                { new User("error_user", "secret_sauce", null, "Michael", "Taylor", "44556") },
+                { new User("error_user", "secret_sauce", null) },
 
                 // Visual user
-                {new User("visual_user", "secret_sauce", null, "Emily", "Davis", "22334") }
+                {new User("visual_user", "secret_sauce", null) }
         };
     }
     @DataProvider(name = "ValidLoginData")
@@ -148,13 +148,15 @@ public class BaseClass {
     WebElement firstname_Input(){return driver.findElement(By.id("first-name"));}
     WebElement lastname_Input(){return driver.findElement(By.id("last-name"));}
     WebElement zip_Code_Input(){return driver.findElement(By.id("postal-code"));}
+    WebElement continue_CheckOut_Btn(){ return driver.findElement(By.id("continue"));}
     String getErrorMessage() {
         if (driver.findElements(By.cssSelector("div.error-message-container.error h3[data-test='error']")).size() > 0) {
             return driver.findElement(By.cssSelector("h3[data-test='error']")).getText();
         } else {
             return "";
         }
-    }    WebElement continue_CheckOut_Btn(){ return driver.findElement(By.id("continue"));}
+    }
+
     public JSONArray readCheckoutDataJson() throws IOException {
         String json = new String(Files.readAllBytes(Paths.get("./src/test/java/tests/CheckoutData.json")));
         JSONObject obj = new JSONObject(json);

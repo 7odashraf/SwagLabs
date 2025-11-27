@@ -4,18 +4,12 @@ public class User {
     String username;
     String password;
     String errorMessage;
-    String firstName;
-    String lastName;
-    String zipCode;
 
     // Constructor
-    public User(String username, String password, String errorMessage, String firstName, String lastName, String zipCode) {
+    public User(String username, String password, String errorMessage) {
         this.username = username;
         this.password = password;
         this.errorMessage = errorMessage;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.zipCode = zipCode;
     }
 
     // Getters and Setters
@@ -29,17 +23,5 @@ public class User {
 
     public String getErrorMessage() {
         return errorMessage;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getZipCode() {
-        return zipCode;
     }
 }
