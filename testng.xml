@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="SauceDemo Test Suite" >
+<suite name="SauceDemo Test Suite" parallel="tests" thread-count="4">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
     <test name="Login Tests">
         <classes>
             <class name="tests.LoginTest"/>
