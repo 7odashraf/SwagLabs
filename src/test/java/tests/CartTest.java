@@ -3,9 +3,10 @@ package tests;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,12 +27,17 @@ public class CartTest extends BaseClass {
     public void verifyAddRemoveItemFromCart(String username, String password) throws IOException {
         Login(username, password);
 
+        // Read the list of products from the JSON file
         JSONArray items = readProductListJson();
 
+        SoftAssert softAssert = new SoftAssert();
+
+        // Find all inventory items on the inventory page
         List<WebElement> inventoryItems = driver.findElements(By.cssSelector(".inventory_item"));
 
+        // Loop through each item in the inventory
         for (int i = 0; i < inventoryItems.size(); i++) {
-
+            // Get the product details from the JSON file
             JSONObject product = items.getJSONObject(i);
 
             String expectedName = product.getString("name");
@@ -47,17 +53,18 @@ public class CartTest extends BaseClass {
 
             int newBadge = getCartBadgeNumber();
 
-            Assert.assertTrue(newBadge > oldBadge, "Add to Cart Test Failed");
+            softAssert.assertTrue(newBadge > oldBadge, "User : '"+username+"', The product: " + expectedName + ", Add to Cart test failed: badge count did not decrease");
             shopping_Cart_Btn().click();
 
-
+            // Get the product name, description, and price from the cart page
             String itemName = getLastItemFromCart().findElement(By.cssSelector(".inventory_item_name")).getText();
             String itemDescription = getLastItemFromCart().findElement(By.cssSelector(".inventory_item_desc")).getText();
             String itemPrice = getLastItemFromCart().findElement(By.cssSelector(".inventory_item_price")).getText();
 
-            Assert.assertEquals(itemName, expectedName, "The product: " + itemName + " name does not match the expected name.");
-            Assert.assertEquals(itemDescription, expectedDescription, "The product: " + itemName + " description does not match the expected description.");
-            Assert.assertEquals(itemPrice, expectedPrice, "The product: " + itemName + " price does not match the expected price.");
+            // Validate the product name,description,price
+            softAssert.assertEquals(itemName, expectedName, "User : '"+username+"', The product: " + expectedName + " name does not match the expected name.");
+            softAssert.assertEquals(itemDescription, expectedDescription, "User : '"+username+"', The product: " + expectedName + " description does not match the expected description.");
+            softAssert.assertEquals(itemPrice, expectedPrice, "User : '"+username+"',The product: " + expectedName + " price does not match the expected price.");
 
             // back to inventory page
             continue_Shopping_Btn().click();
@@ -65,6 +72,7 @@ public class CartTest extends BaseClass {
         }
         for (int i = 0; i < inventoryItems.size(); i++) {
 
+            // Read the list of products from the JSON file
             JSONObject product = items.getJSONObject(i);
 
             String expectedName = product.getString("name");
@@ -73,12 +81,15 @@ public class CartTest extends BaseClass {
 
             int oldBadge = getCartBadgeNumber();
 
-            WebElement removeFromCartBtn = driver.findElement(By.id(RemoveFromCartId));
-            removeFromCartBtn.click();
-
+            try {
+                WebElement removeFromCartBtn = driver.findElement(By.id(RemoveFromCartId));
+                removeFromCartBtn.click();
+            }catch (NoSuchElementException e){
+                softAssert.fail("User : '"+username+"', The product: " + expectedName + ",  Remove from cart button not found or not clickable");
+            }
             int newBadge = getCartBadgeNumber();
 
-            Assert.assertTrue(newBadge < oldBadge, "Add to Cart Test Failed");
+            softAssert.assertTrue(newBadge < oldBadge, "User : '"+username+"', The product: " + expectedName + ", Add to Cart test failed: badge count did not decrease");
             shopping_Cart_Btn().click();
 
             boolean productFound = false;
@@ -91,13 +102,15 @@ public class CartTest extends BaseClass {
                 }
             }
 
-            Assert.assertFalse(productFound, "The product " + expectedName + " was not removed from the cart.");
+            softAssert.assertFalse(productFound, "User : '"+username+"', The product " + expectedName + " was not removed from the cart.");
 
 
             // back to inventory page
             continue_Shopping_Btn().click();
 
         }
+        softAssert.assertAll();
+
     }
 
 }

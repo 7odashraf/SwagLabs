@@ -36,33 +36,16 @@ public class BaseClass {
     // DataProviders
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() {
-        return new Object[][]{
-                // Standard user
-                {new User("standard_user", "secret_sauce", null)},
-
-                // Invalid user
-                {new User("invalid_user", "invalid_user", "Epic sadface: Username and password do not match any user in this service")},
-
-                // Empty username
-                {new User("", "secret_sauce", "Epic sadface: Username is required")},
-
-                // Empty password
-                {new User("standard_user", "", "Epic sadface: Password is required") },
-
-                // User4 with empty password (edge case)
-                { new User("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out.") },
-
-                // Problem user
-                { new User("problem_user", "secret_sauce", null) },
-
-                // Performance glitch user
-                { new User("performance_glitch_user", "secret_sauce", null) },
-
-                // Error user
-                { new User("error_user", "secret_sauce", null) },
-
-                // Visual user
-                {new User("visual_user", "secret_sauce", null) }
+        return new Object[][]{// Data provider for LoginTest with erorr messages
+                {"standard_user", "secret_sauce", null}, // Standard user
+                {"invalid_user", "invalid_user", "Epic sadface: Username and password do not match any user in this service"}, // Invalid user
+                {"", "secret_sauce", "Epic sadface: Username is required"}, // Empty username
+                {"standard_user", "", "Epic sadface: Password is required" }, // Empty password
+                {"locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out." }, //  empty password
+                {"problem_user", "secret_sauce", null }, // Problem user
+                {"performance_glitch_user", "secret_sauce", null }, // Performance glitch user
+                {"error_user", "secret_sauce", null }, // Error user
+                {"visual_user", "secret_sauce", null } // Visual user
         };
     }
     @DataProvider(name = "ValidLoginData")
