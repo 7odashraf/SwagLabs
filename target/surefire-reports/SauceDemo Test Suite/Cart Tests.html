@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 07 11:01:54 EET 2025</td>
+<td>Started on:</td><td>Sun Dec 07 13:28:41 EET 2025</td>
 </tr>
-<tr><td>Total time:</td><td>160 seconds (160343 ms)</td>
+<tr><td>Total time:</td><td>148 seconds (148028 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,85 +75,6 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
-<tr>
-<td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: error_user, secret_sauce</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt description does not match the expected description. expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
-	User : &apos;error_user&apos;,The product: Sauce Labs Bolt T-Shirt price does not match the expected price. expected [$15.99] but found [$9.99],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket description does not match the expected description. expected [It&apos;s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
-	User : &apos;error_user&apos;,The product: Sauce Labs Fleece Jacket price does not match the expected price. expected [$49.99] but found [$9.99],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) description does not match the expected description. expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won&apos;t unravel.],
-	User : &apos;error_user&apos;,The product: Test.allTheThings() T-Shirt (Red) price does not match the expected price. expected [$15.99] but found [$7.99],
-	User : &apos;error_user&apos;, The product: Sauce Labs Backpack, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Backpack was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bike Light, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Bike Light was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Onesie, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Onesie was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
-	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:107)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1716022769", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1716022769'><pre>java.lang.AssertionError: The following asserts failed:
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt description does not match the expected description. expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
-	User : &apos;error_user&apos;,The product: Sauce Labs Bolt T-Shirt price does not match the expected price. expected [$15.99] but found [$9.99],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket description does not match the expected description. expected [It&apos;s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
-	User : &apos;error_user&apos;,The product: Sauce Labs Fleece Jacket price does not match the expected price. expected [$49.99] but found [$9.99],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) description does not match the expected description. expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won&apos;t unravel.],
-	User : &apos;error_user&apos;,The product: Test.allTheThings() T-Shirt (Red) price does not match the expected price. expected [$15.99] but found [$7.99],
-	User : &apos;error_user&apos;, The product: Sauce Labs Backpack, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Backpack was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bike Light, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Bike Light was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product: Sauce Labs Onesie, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
-	User : &apos;error_user&apos;, The product Sauce Labs Onesie was not removed from the cart. expected [false] but found [true],
-	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:107)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-</pre></div></td>
-<td>7</td>
-<td>tests.CartTest@6c6c5427</td></tr>
 <tr>
 <td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: problem_user, secret_sauce</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
@@ -178,14 +99,14 @@ function toggleAllBoxes() {
 	User : &apos;problem_user&apos;, The product: Sauce Labs Onesie, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
 	User : &apos;problem_user&apos;, The product Sauce Labs Onesie was not removed from the cart. expected [false] but found [true],
 	User : &apos;problem_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
-	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:107)
+	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace582649623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace582649623'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1846159654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1846159654'><pre>java.lang.AssertionError: The following asserts failed:
 	User : &apos;problem_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
 	User : &apos;problem_user&apos;, The product: Sauce Labs Bolt T-Shirt name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
 	User : &apos;problem_user&apos;, The product: Sauce Labs Bolt T-Shirt description does not match the expected description. expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
@@ -209,7 +130,7 @@ function toggleAllBoxes() {
 	User : &apos;problem_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:107)
+	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:128)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -231,7 +152,86 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 </pre></div></td>
-<td>11</td>
+<td>6</td>
+<td>tests.CartTest@6c6c5427</td></tr>
+<tr>
+<td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt description does not match the expected description. expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
+	User : &apos;error_user&apos;,The product: Sauce Labs Bolt T-Shirt price does not match the expected price. expected [$15.99] but found [$9.99],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket description does not match the expected description. expected [It&apos;s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
+	User : &apos;error_user&apos;,The product: Sauce Labs Fleece Jacket price does not match the expected price. expected [$49.99] but found [$9.99],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) description does not match the expected description. expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won&apos;t unravel.],
+	User : &apos;error_user&apos;,The product: Test.allTheThings() T-Shirt (Red) price does not match the expected price. expected [$15.99] but found [$7.99],
+	User : &apos;error_user&apos;, The product: Sauce Labs Backpack, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Backpack was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bike Light, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Bike Light was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Onesie, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Onesie was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
+	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace566652584", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace566652584'><pre>java.lang.AssertionError: The following asserts failed:
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt description does not match the expected description. expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
+	User : &apos;error_user&apos;,The product: Sauce Labs Bolt T-Shirt price does not match the expected price. expected [$15.99] but found [$9.99],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket description does not match the expected description. expected [It&apos;s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.] but found [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.],
+	User : &apos;error_user&apos;,The product: Sauce Labs Fleece Jacket price does not match the expected price. expected [$49.99] but found [$9.99],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red) description does not match the expected description. expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won&apos;t unravel.],
+	User : &apos;error_user&apos;,The product: Test.allTheThings() T-Shirt (Red) price does not match the expected price. expected [$15.99] but found [$7.99],
+	User : &apos;error_user&apos;, The product: Sauce Labs Backpack, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Backpack was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bike Light, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Bike Light was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Sauce Labs Bolt T-Shirt, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Fleece Jacket, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product: Sauce Labs Onesie, Add to Cart test failed: badge count did not decrease expected [true] but found [false],
+	User : &apos;error_user&apos;, The product Sauce Labs Onesie was not removed from the cart. expected [false] but found [true],
+	User : &apos;error_user&apos;, The product: Test.allTheThings() T-Shirt (Red), Add to Cart test failed: badge count did not decrease expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at tests.CartTest.verifyAddRemoveItemFromCart(CartTest.java:128)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>9</td>
 <td>tests.CartTest@6c6c5427</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -245,17 +245,17 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: standard_user, secret_sauce</td>
 <td></td>
-<td>9</td>
-<td>tests.CartTest@6c6c5427</td></tr>
-<tr>
-<td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: visual_user, secret_sauce</td>
-<td></td>
 <td>7</td>
 <td>tests.CartTest@6c6c5427</td></tr>
 <tr>
 <td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: performance_glitch_user, secret_sauce</td>
 <td></td>
-<td>72</td>
+<td>71</td>
+<td>tests.CartTest@6c6c5427</td></tr>
+<tr>
+<td title='tests.CartTest.verifyAddRemoveItemFromCart()'><b>verifyAddRemoveItemFromCart</b><br>Test class: tests.CartTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>6</td>
 <td>tests.CartTest@6c6c5427</td></tr>
 </table><p>
 </body>

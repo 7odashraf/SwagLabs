@@ -52,6 +52,19 @@
       </class> <!-- tests.ProductPageTest -->
     </classes>
   </test> <!-- ProductPage Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Overview Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.OverviewTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testFinishProcess" invocation-numbers="1 3"/>
+          <include name="setup"/>
+          <include name="testTotalPrice" invocation-numbers="1 3"/>
+          <include name="testOverviewPage" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.OverviewTest -->
+    </classes>
+  </test> <!-- Overview Tests(failed) -->
   <test thread-count="4" parallel="tests" name="Checkout Tests(failed)" verbose="0">
     <classes>
       <class name="tests.CheckoutInfoTest">
@@ -63,17 +76,4 @@
       </class> <!-- tests.CheckoutInfoTest -->
     </classes>
   </test> <!-- Checkout Tests(failed) -->
-  <test thread-count="4" parallel="tests" name="Overview Tests(failed)" verbose="0">
-    <classes>
-      <class name="tests.OverviewTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="testFinishProcess" invocation-numbers="1 3"/>
-          <include name="setup"/>
-          <include name="testOverviewPage" invocation-numbers="1 3"/>
-          <include name="testTotalPrice" invocation-numbers="1 3"/>
-        </methods>
-      </class> <!-- tests.OverviewTest -->
-    </classes>
-  </test> <!-- Overview Tests(failed) -->
 </suite> <!-- Failed suite [SauceDemo Test Suite] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>12/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 07 10:59:48 EET 2025</td>
+<td>Started on:</td><td>Sun Dec 07 13:27:00 EET 2025</td>
 </tr>
-<tr><td>Total time:</td><td>334 seconds (334653 ms)</td>
+<tr><td>Total time:</td><td>286 seconds (286769 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -84,14 +84,14 @@ function toggleAllBoxes() {
 	User : &apos;error_user&apos;, Product: &apos;Sauce Labs Fleece Jacket&apos;, Product description mismatch expected [It&apos;s not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.],
 	User : &apos;error_user&apos;, Product: &apos;Sauce Labs Onesie&apos;, Product description mismatch expected [Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won&apos;t unravel.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.],
 	User : &apos;error_user&apos;, Product: &apos;Test.allTheThings() T-Shirt (Red)&apos;, Product description mismatch expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.]
-	at tests.ProductPageTest.validateProduct_Name_Price_Description(ProductPageTest.java:64)
+	at tests.ProductPageTest.validateProduct_Name_Price_Description(ProductPageTest.java:73)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1683894904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1683894904'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace578109587", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace578109587'><pre>java.lang.AssertionError: The following asserts failed:
 	User : &apos;error_user&apos;, Product: &apos;Sauce Labs Backpack&apos;, Product description mismatch expected [carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.],
 	User : &apos;error_user&apos;, Product: &apos;Sauce Labs Bike Light&apos;, Product description mismatch expected [A red light isn&apos;t the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.],
 	User : &apos;error_user&apos;, Product: &apos;Sauce Labs Bolt T-Shirt&apos;, Product description mismatch expected [Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.],
@@ -100,7 +100,60 @@ function toggleAllBoxes() {
 	User : &apos;error_user&apos;, Product: &apos;Test.allTheThings() T-Shirt (Red)&apos;, Product description mismatch expected [This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.] but found [A description should be here, but it failed to render! This error has been reported to Backtrace.]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.ProductPageTest.validateProduct_Name_Price_Description(ProductPageTest.java:64)
+	at tests.ProductPageTest.validateProduct_Name_Price_Description(ProductPageTest.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>6</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	User : &apos;problem_user&apos;, Product ID: item_1&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_1&apos;, Test failed: Cart badge still visible.,
+	User : &apos;problem_user&apos;, Product ID: item_5&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_5&apos;, Test failed: Cart badge still visible.,
+	expected [true] but found [false],
+	User : &apos;problem_user&apos;, Product ID: item_3&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
+	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1267198285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1267198285'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [true] but found [false],
+	User : &apos;problem_user&apos;, Product ID: item_1&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_1&apos;, Test failed: Cart badge still visible.,
+	User : &apos;problem_user&apos;, Product ID: item_5&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_5&apos;, Test failed: Cart badge still visible.,
+	expected [true] but found [false],
+	User : &apos;problem_user&apos;, Product ID: item_3&apos;,Test failed: Product not added to cart.,
+	User : &apos;problem_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:180)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -135,14 +188,14 @@ function toggleAllBoxes() {
 	expected [true] but found [false],
 	User : &apos;error_user&apos;, Product ID: item_3&apos;,Test failed: Product not added to cart.,
 	User : &apos;error_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
-	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:158)
+	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:180)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2117176249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2117176249'><pre>java.lang.AssertionError: The following asserts failed:
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace428862308", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace428862308'><pre>java.lang.AssertionError: The following asserts failed:
 	expected [true] but found [false],
 	User : &apos;error_user&apos;, Product ID: item_1&apos;,Test failed: Product not added to cart.,
 	User : &apos;error_user&apos;, Product ID: item_1&apos;, Test failed: Cart badge still visible.,
@@ -153,7 +206,7 @@ function toggleAllBoxes() {
 	User : &apos;error_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:158)
+	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:180)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -175,60 +228,7 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 </pre></div></td>
-<td>8</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false],
-	User : &apos;problem_user&apos;, Product ID: item_1&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_1&apos;, Test failed: Cart badge still visible.,
-	User : &apos;problem_user&apos;, Product ID: item_5&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_5&apos;, Test failed: Cart badge still visible.,
-	expected [true] but found [false],
-	User : &apos;problem_user&apos;, Product ID: item_3&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
-	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:158)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1261935371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1261935371'><pre>java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false],
-	User : &apos;problem_user&apos;, Product ID: item_1&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_1&apos;, Test failed: Cart badge still visible.,
-	User : &apos;problem_user&apos;, Product ID: item_5&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_5&apos;, Test failed: Cart badge still visible.,
-	expected [true] but found [false],
-	User : &apos;problem_user&apos;, Product ID: item_3&apos;,Test failed: Product not added to cart.,
-	User : &apos;problem_user&apos;, Product ID: item_3&apos;, Test failed: Cart badge still visible.
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at tests.ProductPageTest.test_Add_Remove_Item(ProductPageTest.java:158)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-</pre></div></td>
-<td>9</td>
+<td>7</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -240,39 +240,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: visual_user, secret_sauce</td>
-<td></td>
-<td>9</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: standard_user, secret_sauce</td>
-<td></td>
-<td>6</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
-<td></td>
-<td>8</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
 <td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: standard_user, secret_sauce</td>
 <td></td>
 <td>6</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: error_user, secret_sauce</td>
-<td></td>
-<td>8</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
-<td></td>
-<td>7</td>
-<td>tests.ProductPageTest@160ac7fb</td></tr>
-<tr>
-<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: performance_glitch_user, secret_sauce</td>
-<td></td>
-<td>42</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 <tr>
 <td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: performance_glitch_user, secret_sauce</td>
@@ -280,22 +250,52 @@ function toggleAllBoxes() {
 <td>10</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 <tr>
-<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: standard_user, secret_sauce</td>
+<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
 <td></td>
-<td>7</td>
+<td>3</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 <tr>
-<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: visual_user, secret_sauce</td>
+<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>4</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: visual_user, secret_sauce</td>
 <td></td>
 <td>7</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 <tr>
 <td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: performance_glitch_user, secret_sauce</td>
 <td></td>
-<td>13</td>
+<td>10</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>41</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: error_user, secret_sauce</td>
+<td></td>
+<td>4</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
 <tr>
 <td title='tests.ProductPageTest.validateProductImages()'><b>validateProductImages</b><br>Test class: tests.ProductPageTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>5</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.validateProduct_Name_Price_Description()'><b>validateProduct_Name_Price_Description</b><br>Test class: tests.ProductPageTest<br>Parameters: problem_user, secret_sauce</td>
+<td></td>
+<td>7</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>5</td>
+<td>tests.ProductPageTest@160ac7fb</td></tr>
+<tr>
+<td title='tests.ProductPageTest.test_Add_Remove_Item()'><b>test_Add_Remove_Item</b><br>Test class: tests.ProductPageTest<br>Parameters: standard_user, secret_sauce</td>
 <td></td>
 <td>6</td>
 <td>tests.ProductPageTest@160ac7fb</td></tr>
