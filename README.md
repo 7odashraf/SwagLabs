@@ -32,7 +32,7 @@
         └── testdata
             ├── CheckoutData.json
             └── ProductList.json
-    └── target
+└── target
 └── .gitignore
 └── pom.xml
 └── testng.xml
