@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [SauceDemo Test Suite]" verbose="0">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Inventory Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.InventoryTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="testInventoryItems" invocation-numbers="4"/>
+          <include name="test_Add_Remove_Item" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.InventoryTest -->
+    </classes>
+  </test> <!-- Inventory Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Cart Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.CartTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="verifyAddRemoveItemFromCart" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.CartTest -->
+    </classes>
+  </test> <!-- Cart Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Sorting Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.SortingTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="sortingByPriceLowtoHigh" invocation-numbers="1 3 4"/>
+          <include name="sortingByPriceHightoLow" invocation-numbers="1 3 4"/>
+          <include name="setup"/>
+          <include name="sortingByNameZtoA" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.SortingTest -->
+    </classes>
+  </test> <!-- Sorting Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="ProductPage Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.ProductPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="validateProduct_Name_Price_Description" invocation-numbers="3"/>
+          <include name="test_Add_Remove_Item" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.ProductPageTest -->
+    </classes>
+  </test> <!-- ProductPage Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Checkout Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.CheckoutInfoTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testCheckoutPage" invocation-numbers="1 3"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.CheckoutInfoTest -->
+    </classes>
+  </test> <!-- Checkout Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Overview Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.OverviewTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testFinishProcess" invocation-numbers="1 3"/>
+          <include name="setup"/>
+          <include name="testOverviewPage" invocation-numbers="1 3"/>
+          <include name="testTotalPrice" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- tests.OverviewTest -->
+    </classes>
+  </test> <!-- Overview Tests(failed) -->
+</suite> <!-- Failed suite [SauceDemo Test Suite] -->

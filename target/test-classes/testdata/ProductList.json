@@ -1,0 +1,58 @@
+{
+  "inventory_list": [
+    {
+      "id": "item_4",
+      "name": "Sauce Labs Backpack",
+      "description": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.",
+      "price": "$29.99",
+      "image": "/static/media/sauce-backpack-1200x1500.0a0b85a385945026062b.jpg",
+      "add_to_cart_id": "add-to-cart-sauce-labs-backpack",
+      "remove_from_cart_id": "remove-sauce-labs-backpack"
+    },
+    {
+      "id": "item_0",
+      "name": "Sauce Labs Bike Light",
+      "description": "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.",
+      "price": "$9.99",
+      "image": "/static/media/bike-light-1200x1500.37c843b09a7d77409d63.jpg",
+      "add_to_cart_id": "add-to-cart-sauce-labs-bike-light",
+      "remove_from_cart_id": "remove-sauce-labs-bike-light"
+    },
+    {
+      "id": "item_1",
+      "name": "Sauce Labs Bolt T-Shirt",
+      "description": "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.",
+      "price": "$15.99",
+      "image": "/static/media/bolt-shirt-1200x1500.c2599ac5f0a35ed5931e.jpg",
+      "add_to_cart_id": "add-to-cart-sauce-labs-bolt-t-shirt",
+      "remove_from_cart_id": "remove-sauce-labs-bolt-t-shirt"
+    },
+    {
+      "id": "item_5",
+      "name": "Sauce Labs Fleece Jacket",
+      "description": "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.",
+      "price": "$49.99",
+      "image": "/static/media/sauce-pullover-1200x1500.51d7ffaf301e698772c8.jpg",
+      "add_to_cart_id": "add-to-cart-sauce-labs-fleece-jacket",
+      "remove_from_cart_id": "remove-sauce-labs-fleece-jacket"
+    },
+    {
+      "id": "item_2",
+      "name": "Sauce Labs Onesie",
+      "description": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.",
+      "price": "$7.99",
+      "image": "/static/media/red-onesie-1200x1500.2ec615b271ef4c3bc430.jpg",
+      "add_to_cart_id": "add-to-cart-sauce-labs-onesie",
+      "remove_from_cart_id": "remove-sauce-labs-onesie"
+    },
+    {
+      "id": "item_3",
+      "name": "Test.allTheThings() T-Shirt (Red)",
+      "description": "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
+      "price": "$15.99",
+      "image": "/static/media/red-tatt-1200x1500.30dadef477804e54fc7b.jpg",
+      "add_to_cart_id": "add-to-cart-test.allthethings()-t-shirt-(red)",
+      "remove_from_cart_id": "remove-test.allthethings()-t-shirt-(red)"
+    }
+  ]
+}

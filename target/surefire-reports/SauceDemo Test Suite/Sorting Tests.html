@@ -1,0 +1,461 @@
+<html>
+<head>
+<title>TestNG:  Sorting Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Sorting Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Dec 07 10:59:48 EET 2025</td>
+</tr>
+<tr><td>Total time:</td><td>309 seconds (309268 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceLowtoHigh()'><b>sortingByPriceLowtoHigh</b><br>Test class: tests.SortingTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 29.99 != 7.99 expected [29.99] but found [7.99]
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2091383063", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2091383063'><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 29.99 != 7.99 expected [29.99] but found [7.99]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceHightoLow()'><b>sortingByPriceHightoLow</b><br>Test class: tests.SortingTest<br>Parameters: visual_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;visual_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 22.42 != 47.66 expected [22.42] but found [47.66]
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace183549522", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace183549522'><pre>java.lang.AssertionError: User: &apos;visual_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 22.42 != 47.66 expected [22.42] but found [47.66]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceHightoLow()'><b>sortingByPriceHightoLow</b><br>Test class: tests.SortingTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 29.99 != 49.99 expected [29.99] but found [49.99]
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace255062576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace255062576'><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 29.99 != 49.99 expected [29.99] but found [49.99]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceHightoLow()'><b>sortingByPriceHightoLow</b><br>Test class: tests.SortingTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 29.99 != 49.99 expected [29.99] but found [49.99]
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1907515350", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1907515350'><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item prices should be sorted in descending order.: Lists differ at element [0]: 29.99 != 49.99 expected [29.99] but found [49.99]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceHightoLow(SortingTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameZtoA()'><b>sortingByNameZtoA</b><br>Test class: tests.SortingTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item names should be sorted in descending alphabetical order.: Lists differ at element [0]: Sauce Labs Backpack != Test.allTheThings() T-Shirt (Red) expected [Sauce Labs Backpack] but found [Test.allTheThings() T-Shirt (Red)]
+	at tests.SortingTest.sortingByNameZtoA(SortingTest.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1063225066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1063225066'><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item names should be sorted in descending alphabetical order.: Lists differ at element [0]: Sauce Labs Backpack != Test.allTheThings() T-Shirt (Red) expected [Sauce Labs Backpack] but found [Test.allTheThings() T-Shirt (Red)]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByNameZtoA(SortingTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceLowtoHigh()'><b>sortingByPriceLowtoHigh</b><br>Test class: tests.SortingTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 29.99 != 7.99 expected [29.99] but found [7.99]
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2053986507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2053986507'><pre>java.lang.AssertionError: User: &apos;problem_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 29.99 != 7.99 expected [29.99] but found [7.99]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceLowtoHigh()'><b>sortingByPriceLowtoHigh</b><br>Test class: tests.SortingTest<br>Parameters: visual_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;visual_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 14.22 != 4.76 expected [14.22] but found [4.76]
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1515321530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1515321530'><pre>java.lang.AssertionError: User: &apos;visual_user&apos;, Item prices should be sorted in ascending order.: Lists differ at element [0]: 14.22 != 4.76 expected [14.22] but found [4.76]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByPriceLowtoHigh(SortingTest.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameZtoA()'><b>sortingByNameZtoA</b><br>Test class: tests.SortingTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item names should be sorted in descending alphabetical order.: Lists differ at element [0]: Sauce Labs Backpack != Test.allTheThings() T-Shirt (Red) expected [Sauce Labs Backpack] but found [Test.allTheThings() T-Shirt (Red)]
+	at tests.SortingTest.sortingByNameZtoA(SortingTest.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace470210266", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace470210266'><pre>java.lang.AssertionError: User: &apos;error_user&apos;, Item names should be sorted in descending alphabetical order.: Lists differ at element [0]: Sauce Labs Backpack != Test.allTheThings() T-Shirt (Red) expected [Sauce Labs Backpack] but found [Test.allTheThings() T-Shirt (Red)]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:1479)
+	at tests.SortingTest.sortingByNameZtoA(SortingTest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>2</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceLowtoHigh()'><b>sortingByPriceLowtoHigh</b><br>Test class: tests.SortingTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>11</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameAtoZ()'><b>sortingByNameAtoZ</b><br>Test class: tests.SortingTest<br>Parameters: error_user, secret_sauce</td>
+<td></td>
+<td>2</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceHightoLow()'><b>sortingByPriceHightoLow</b><br>Test class: tests.SortingTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameZtoA()'><b>sortingByNameZtoA</b><br>Test class: tests.SortingTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>13</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameAtoZ()'><b>sortingByNameAtoZ</b><br>Test class: tests.SortingTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceHightoLow()'><b>sortingByPriceHightoLow</b><br>Test class: tests.SortingTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>11</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameZtoA()'><b>sortingByNameZtoA</b><br>Test class: tests.SortingTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameAtoZ()'><b>sortingByNameAtoZ</b><br>Test class: tests.SortingTest<br>Parameters: problem_user, secret_sauce</td>
+<td></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameAtoZ()'><b>sortingByNameAtoZ</b><br>Test class: tests.SortingTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>2</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameZtoA()'><b>sortingByNameZtoA</b><br>Test class: tests.SortingTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByPriceLowtoHigh()'><b>sortingByPriceLowtoHigh</b><br>Test class: tests.SortingTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>1</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+<tr>
+<td title='tests.SortingTest.sortingByNameAtoZ()'><b>sortingByNameAtoZ</b><br>Test class: tests.SortingTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>12</td>
+<td>tests.SortingTest@75ed9710</td></tr>
+</table><p>
+</body>
+</html>

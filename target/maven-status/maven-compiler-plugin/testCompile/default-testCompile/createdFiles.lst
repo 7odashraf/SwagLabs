@@ -1,0 +1,9 @@
+tests/LogoutTest.class
+tests/ProductPageTest.class
+tests/LoginTest.class
+tests/InventoryTest.class
+tests/OverviewTest.class
+tests/CartTest.class
+tests/SortingTest.class
+tests/BaseClass.class
+tests/CheckoutInfoTest.class

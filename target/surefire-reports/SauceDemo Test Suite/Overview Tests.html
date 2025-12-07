@@ -1,0 +1,389 @@
+<html>
+<head>
+<title>TestNG:  Overview Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Overview Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Dec 07 11:04:34 EET 2025</td>
+</tr>
+<tr><td>Total time:</td><td>312 seconds (312186 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.OverviewTest.testTotalPrice()'><b>testTotalPrice</b><br>Test class: tests.OverviewTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The total price calculation is incorrect! expected [59.17] but found [43.18],
+	The total price calculation is incorrect! expected [109.16000000000001] but found [43.18],
+	The total price calculation is incorrect! expected [117.79] but found [51.81],
+	The total price calculation is incorrect! expected [133.78] but found [51.81]
+	at tests.OverviewTest.testTotalPrice(OverviewTest.java:149)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace661234445", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace661234445'><pre>java.lang.AssertionError: The following asserts failed:
+	The total price calculation is incorrect! expected [59.17] but found [43.18],
+	The total price calculation is incorrect! expected [109.16000000000001] but found [43.18],
+	The total price calculation is incorrect! expected [117.79] but found [51.81],
+	The total price calculation is incorrect! expected [133.78] but found [51.81]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at tests.OverviewTest.testTotalPrice(OverviewTest.java:149)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>6</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testFinishProcess()'><b>testFinishProcess</b><br>Test class: tests.OverviewTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [https://www.saucedemo.com/checkout-step-two.html]
+	at tests.OverviewTest.testFinishProcess(OverviewTest.java:183)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602048788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602048788'><pre>java.lang.AssertionError: expected [https://www.saucedemo.com/checkout-complete.html] but found [https://www.saucedemo.com/checkout-step-two.html]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at tests.OverviewTest.testFinishProcess(OverviewTest.java:183)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testOverviewPage()'><b>testOverviewPage</b><br>Test class: tests.OverviewTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testOverviewPage(OverviewTest.java:62)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1232642798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1232642798'><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testOverviewPage(OverviewTest.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testTotalPrice()'><b>testTotalPrice</b><br>Test class: tests.OverviewTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testTotalPrice(OverviewTest.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2146380822", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2146380822'><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testTotalPrice(OverviewTest.java:134)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>0</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testOverviewPage()'><b>testOverviewPage</b><br>Test class: tests.OverviewTest<br>Parameters: error_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	The product: Sauce Labs Bike Light name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
+	The product: Sauce Labs Bike Light name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
+	The product: Sauce Labs Onesie name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie]
+	at tests.OverviewTest.testOverviewPage(OverviewTest.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1329380816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1329380816'><pre>java.lang.AssertionError: The following asserts failed:
+	The product: Sauce Labs Bike Light name does not match the expected name. expected [Sauce Labs Bolt T-Shirt] but found [Sauce Labs Bike Light],
+	The product: Sauce Labs Bike Light name does not match the expected name. expected [Sauce Labs Fleece Jacket] but found [Sauce Labs Bike Light],
+	The product: Sauce Labs Onesie name does not match the expected name. expected [Test.allTheThings() T-Shirt (Red)] but found [Sauce Labs Onesie]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at tests.OverviewTest.testOverviewPage(OverviewTest.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>7</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testFinishProcess()'><b>testFinishProcess</b><br>Test class: tests.OverviewTest<br>Parameters: problem_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testFinishProcess(OverviewTest.java:179)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1690341421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1690341421'><pre>java.lang.AssertionError: checkout failed Error: Last Name is required expected [] but found [Error: Last Name is required]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at tests.OverviewTest.fillValidInfo(OverviewTest.java:24)
+	at tests.OverviewTest.testFinishProcess(OverviewTest.java:179)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+</pre></div></td>
+<td>2</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.OverviewTest.testOverviewPage()'><b>testOverviewPage</b><br>Test class: tests.OverviewTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>41</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testFinishProcess()'><b>testFinishProcess</b><br>Test class: tests.OverviewTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>8</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testOverviewPage()'><b>testOverviewPage</b><br>Test class: tests.OverviewTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>6</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testTotalPrice()'><b>testTotalPrice</b><br>Test class: tests.OverviewTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>5</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testFinishProcess()'><b>testFinishProcess</b><br>Test class: tests.OverviewTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>6</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testFinishProcess()'><b>testFinishProcess</b><br>Test class: tests.OverviewTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>41</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testTotalPrice()'><b>testTotalPrice</b><br>Test class: tests.OverviewTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>9</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testTotalPrice()'><b>testTotalPrice</b><br>Test class: tests.OverviewTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>40</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+<tr>
+<td title='tests.OverviewTest.testOverviewPage()'><b>testOverviewPage</b><br>Test class: tests.OverviewTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>10</td>
+<td>tests.OverviewTest@1dd0e7c4</td></tr>
+</table><p>
+</body>
+</html>

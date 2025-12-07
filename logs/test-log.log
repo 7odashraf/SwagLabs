@@ -1,0 +1,210 @@
+[2025-12-06 19:57:15] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-06 19:57:15] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-06 19:57:15] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:57:16] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:57:16] [INFO ] AutomationLogger - Login SUCCESS for user: standard_user
+[2025-12-06 19:57:16] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - ===== Starting Login Test for user: invalid_user =====
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - Entering username: invalid_user
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - Entering password: invalid_user
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: invalid_user
+[2025-12-06 19:57:31] [INFO ] AutomationLogger - ===== Finished Login Test for user: invalid_user =====
+[2025-12-06 19:57:44] [INFO ] AutomationLogger - ===== Starting Login Test for user:  =====
+[2025-12-06 19:57:44] [INFO ] AutomationLogger - Entering username: 
+[2025-12-06 19:57:44] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:57:45] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:57:45] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: 
+[2025-12-06 19:57:45] [INFO ] AutomationLogger - ===== Finished Login Test for user:  =====
+[2025-12-06 19:57:51] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-06 19:57:51] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-06 19:57:51] [INFO ] AutomationLogger - Entering password: 
+[2025-12-06 19:57:51] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:57:52] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: standard_user
+[2025-12-06 19:57:52] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - ===== Starting Login Test for user: locked_out_user =====
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - Entering username: locked_out_user
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: locked_out_user
+[2025-12-06 19:58:00] [INFO ] AutomationLogger - ===== Finished Login Test for user: locked_out_user =====
+[2025-12-06 19:58:10] [INFO ] AutomationLogger - ===== Starting Login Test for user: problem_user =====
+[2025-12-06 19:58:10] [INFO ] AutomationLogger - Entering username: problem_user
+[2025-12-06 19:58:10] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:58:10] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:58:11] [INFO ] AutomationLogger - Login SUCCESS for user: problem_user
+[2025-12-06 19:58:11] [INFO ] AutomationLogger - ===== Finished Login Test for user: problem_user =====
+[2025-12-06 19:58:24] [INFO ] AutomationLogger - ===== Starting Login Test for user: performance_glitch_user =====
+[2025-12-06 19:58:24] [INFO ] AutomationLogger - Entering username: performance_glitch_user
+[2025-12-06 19:58:25] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:58:25] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:58:31] [INFO ] AutomationLogger - Login SUCCESS for user: performance_glitch_user
+[2025-12-06 19:58:31] [INFO ] AutomationLogger - ===== Finished Login Test for user: performance_glitch_user =====
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - ===== Starting Login Test for user: error_user =====
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - Entering username: error_user
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - Login SUCCESS for user: error_user
+[2025-12-06 19:58:43] [INFO ] AutomationLogger - ===== Finished Login Test for user: error_user =====
+[2025-12-06 20:07:46] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-06 20:07:46] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-06 20:07:47] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:07:47] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:07:47] [INFO ] AutomationLogger - Login SUCCESS for user: standard_user
+[2025-12-06 20:07:47] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - ===== Starting Login Test for user: invalid_user =====
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - Entering username: invalid_user
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - Entering password: invalid_user
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: invalid_user
+[2025-12-06 20:07:58] [INFO ] AutomationLogger - ===== Finished Login Test for user: invalid_user =====
+[2025-12-06 20:08:12] [INFO ] AutomationLogger - ===== Starting Login Test for user:  =====
+[2025-12-06 20:08:12] [INFO ] AutomationLogger - Entering username: 
+[2025-12-06 20:08:12] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:08:12] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:13] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: 
+[2025-12-06 20:08:13] [INFO ] AutomationLogger - ===== Finished Login Test for user:  =====
+[2025-12-06 20:08:19] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-06 20:08:19] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-06 20:08:19] [INFO ] AutomationLogger - Entering password: 
+[2025-12-06 20:08:19] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:20] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: standard_user
+[2025-12-06 20:08:20] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - ===== Starting Login Test for user: locked_out_user =====
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - Entering username: locked_out_user
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: locked_out_user
+[2025-12-06 20:08:28] [INFO ] AutomationLogger - ===== Finished Login Test for user: locked_out_user =====
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - ===== Starting Login Test for user: problem_user =====
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - Entering username: problem_user
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - Login SUCCESS for user: problem_user
+[2025-12-06 20:08:37] [INFO ] AutomationLogger - ===== Finished Login Test for user: problem_user =====
+[2025-12-06 20:08:44] [INFO ] AutomationLogger - ===== Starting Login Test for user: performance_glitch_user =====
+[2025-12-06 20:08:44] [INFO ] AutomationLogger - Entering username: performance_glitch_user
+[2025-12-06 20:08:44] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:08:44] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:49] [INFO ] AutomationLogger - Login SUCCESS for user: performance_glitch_user
+[2025-12-06 20:08:49] [INFO ] AutomationLogger - ===== Finished Login Test for user: performance_glitch_user =====
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - ===== Starting Login Test for user: error_user =====
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - Entering username: error_user
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - Login SUCCESS for user: error_user
+[2025-12-06 20:08:56] [INFO ] AutomationLogger - ===== Finished Login Test for user: error_user =====
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - ===== Starting Login Test for user: visual_user =====
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - Entering username: visual_user
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - Clicking login button
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - Login SUCCESS for user: visual_user
+[2025-12-06 20:09:03] [INFO ] AutomationLogger - ===== Finished Login Test for user: visual_user =====
+[2025-12-07 01:16:16] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-07 01:16:16] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-07 01:16:17] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:16:17] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:16:17] [INFO ] AutomationLogger - Login SUCCESS for user: standard_user
+[2025-12-07 01:16:17] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-07 01:16:30] [INFO ] AutomationLogger - ===== Starting Login Test for user: invalid_user =====
+[2025-12-07 01:16:30] [INFO ] AutomationLogger - Entering username: invalid_user
+[2025-12-07 01:16:30] [INFO ] AutomationLogger - Entering password: invalid_user
+[2025-12-07 01:16:31] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:16:31] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: invalid_user
+[2025-12-07 01:16:31] [INFO ] AutomationLogger - ===== Finished Login Test for user: invalid_user =====
+[2025-12-07 01:16:42] [INFO ] AutomationLogger - ===== Starting Login Test for user:  =====
+[2025-12-07 01:16:42] [INFO ] AutomationLogger - Entering username: 
+[2025-12-07 01:16:43] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:16:43] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:16:43] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: 
+[2025-12-07 01:16:43] [INFO ] AutomationLogger - ===== Finished Login Test for user:  =====
+[2025-12-07 01:16:51] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-07 01:16:51] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-07 01:16:52] [INFO ] AutomationLogger - Entering password: 
+[2025-12-07 01:16:52] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:16:52] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: standard_user
+[2025-12-07 01:16:52] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - ===== Starting Login Test for user: locked_out_user =====
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - Entering username: locked_out_user
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: locked_out_user
+[2025-12-07 01:17:04] [INFO ] AutomationLogger - ===== Finished Login Test for user: locked_out_user =====
+[2025-12-07 01:17:19] [INFO ] AutomationLogger - ===== Starting Login Test for user: problem_user =====
+[2025-12-07 01:17:19] [INFO ] AutomationLogger - Entering username: problem_user
+[2025-12-07 01:17:20] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:17:20] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:17:21] [INFO ] AutomationLogger - Login SUCCESS for user: problem_user
+[2025-12-07 01:17:21] [INFO ] AutomationLogger - ===== Finished Login Test for user: problem_user =====
+[2025-12-07 01:17:34] [INFO ] AutomationLogger - ===== Starting Login Test for user: performance_glitch_user =====
+[2025-12-07 01:17:34] [INFO ] AutomationLogger - Entering username: performance_glitch_user
+[2025-12-07 01:17:35] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:17:35] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:17:40] [INFO ] AutomationLogger - Login SUCCESS for user: performance_glitch_user
+[2025-12-07 01:17:40] [INFO ] AutomationLogger - ===== Finished Login Test for user: performance_glitch_user =====
+[2025-12-07 01:17:54] [INFO ] AutomationLogger - ===== Starting Login Test for user: error_user =====
+[2025-12-07 01:17:54] [INFO ] AutomationLogger - Entering username: error_user
+[2025-12-07 01:17:54] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:17:54] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:17:55] [INFO ] AutomationLogger - Login SUCCESS for user: error_user
+[2025-12-07 01:17:55] [INFO ] AutomationLogger - ===== Finished Login Test for user: error_user =====
+[2025-12-07 01:18:06] [INFO ] AutomationLogger - ===== Starting Login Test for user: visual_user =====
+[2025-12-07 01:18:06] [INFO ] AutomationLogger - Entering username: visual_user
+[2025-12-07 01:18:06] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 01:18:06] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 01:18:07] [INFO ] AutomationLogger - Login SUCCESS for user: visual_user
+[2025-12-07 01:18:07] [INFO ] AutomationLogger - ===== Finished Login Test for user: visual_user =====
+[2025-12-07 11:00:07] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-07 11:00:07] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-07 11:00:07] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:00:07] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:00:08] [INFO ] AutomationLogger - Login SUCCESS for user: standard_user
+[2025-12-07 11:00:08] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-07 11:00:20] [INFO ] AutomationLogger - ===== Starting Login Test for user: invalid_user =====
+[2025-12-07 11:00:20] [INFO ] AutomationLogger - Entering username: invalid_user
+[2025-12-07 11:00:20] [INFO ] AutomationLogger - Entering password: invalid_user
+[2025-12-07 11:00:20] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:00:21] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: invalid_user
+[2025-12-07 11:00:21] [INFO ] AutomationLogger - ===== Finished Login Test for user: invalid_user =====
+[2025-12-07 11:00:32] [INFO ] AutomationLogger - ===== Starting Login Test for user:  =====
+[2025-12-07 11:00:32] [INFO ] AutomationLogger - Entering username: 
+[2025-12-07 11:00:32] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:00:32] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:00:33] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: 
+[2025-12-07 11:00:33] [INFO ] AutomationLogger - ===== Finished Login Test for user:  =====
+[2025-12-07 11:00:44] [INFO ] AutomationLogger - ===== Starting Login Test for user: standard_user =====
+[2025-12-07 11:00:44] [INFO ] AutomationLogger - Entering username: standard_user
+[2025-12-07 11:00:44] [INFO ] AutomationLogger - Entering password: 
+[2025-12-07 11:00:44] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:00:45] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: standard_user
+[2025-12-07 11:00:45] [INFO ] AutomationLogger - ===== Finished Login Test for user: standard_user =====
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - ===== Starting Login Test for user: locked_out_user =====
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - Entering username: locked_out_user
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - Correct error message displayed for invalid login attempt of user: locked_out_user
+[2025-12-07 11:00:55] [INFO ] AutomationLogger - ===== Finished Login Test for user: locked_out_user =====
+[2025-12-07 11:01:06] [INFO ] AutomationLogger - ===== Starting Login Test for user: problem_user =====
+[2025-12-07 11:01:06] [INFO ] AutomationLogger - Entering username: problem_user
+[2025-12-07 11:01:07] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:01:07] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:01:08] [INFO ] AutomationLogger - Login SUCCESS for user: problem_user
+[2025-12-07 11:01:08] [INFO ] AutomationLogger - ===== Finished Login Test for user: problem_user =====
+[2025-12-07 11:01:19] [INFO ] AutomationLogger - ===== Starting Login Test for user: performance_glitch_user =====
+[2025-12-07 11:01:19] [INFO ] AutomationLogger - Entering username: performance_glitch_user
+[2025-12-07 11:01:19] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:01:19] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:01:25] [INFO ] AutomationLogger - Login SUCCESS for user: performance_glitch_user
+[2025-12-07 11:01:25] [INFO ] AutomationLogger - ===== Finished Login Test for user: performance_glitch_user =====
+[2025-12-07 11:01:36] [INFO ] AutomationLogger - ===== Starting Login Test for user: error_user =====
+[2025-12-07 11:01:36] [INFO ] AutomationLogger - Entering username: error_user
+[2025-12-07 11:01:37] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:01:37] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:01:37] [INFO ] AutomationLogger - Login SUCCESS for user: error_user
+[2025-12-07 11:01:37] [INFO ] AutomationLogger - ===== Finished Login Test for user: error_user =====
+[2025-12-07 11:01:50] [INFO ] AutomationLogger - ===== Starting Login Test for user: visual_user =====
+[2025-12-07 11:01:50] [INFO ] AutomationLogger - Entering username: visual_user
+[2025-12-07 11:01:51] [INFO ] AutomationLogger - Entering password: secret_sauce
+[2025-12-07 11:01:51] [INFO ] AutomationLogger - Clicking login button
+[2025-12-07 11:01:51] [INFO ] AutomationLogger - Login SUCCESS for user: visual_user
+[2025-12-07 11:01:51] [INFO ] AutomationLogger - ===== Finished Login Test for user: visual_user =====
