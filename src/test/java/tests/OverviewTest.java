@@ -1,5 +1,6 @@
 package tests;
 
+import Pages.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
@@ -15,17 +16,22 @@ import java.util.Objects;
 public class OverviewTest extends BaseClass{
 
     // Helper method to fill valid user information and assert no error message during checkout
-    public void fillValidInfo() {
-        firstname_Input().sendKeys("John");
-        lastname_Input().sendKeys("Doe");
-        zip_Code_Input().sendKeys("12345");
-        continue_CheckOut_Btn().click();
-        Assert.assertEquals(getErrorMessage(), "", "checkout failed " + getErrorMessage());
+    public void fillValidInfo(CheckoutPage checkout) {
+        checkout.firstnameInput().sendKeys("John");
+        checkout.lastnameInput().sendKeys("Doe");
+        checkout.zipCodeInput().sendKeys("12345");
+        checkout.clickContinue();
+        Assert.assertEquals(checkout.getErrorMessage(), "", "checkout failed " + checkout.getErrorMessage());
     }
 
     @Test(dataProvider = "ValidLoginData")
     public void testOverviewPage(String username, String password) throws IOException {
-        Login(username, password);
+        LoginPage login = new LoginPage(driver);
+        CartPage cart = new CartPage(driver);
+        CheckoutPage checkout = new CheckoutPage(driver);
+        OverviewPage overview = new OverviewPage(driver);
+
+        login.Login(username, password);
 
         // Read the list of products from a JSON file
         JSONArray items = readProductListJson();
@@ -46,29 +52,26 @@ public class OverviewTest extends BaseClass{
             String expectedDescription = product.getString("description");
             String expectedPrice = product.getString("price");
 
-            shopping_Cart_Btn().click();
+            cart.clickShoppingCart();
 
             // Verify that the item added to the cart matches the expected name
-            String itemName = getLastItemFromCart().findElement(By.cssSelector(".inventory_item_name")).getText();
+            String itemName = cart.getLastItemFromCart().findElement(By.cssSelector(".inventory_item_name")).getText();
             softAssert.assertEquals(itemName, expectedName, "The product: " + itemName + " name does not match the expected name.");
 
-            checkOut_Btn().click();
-            fillValidInfo();  // Fill valid user info and proceed
+            cart.clickCheckout();
+            fillValidInfo(checkout);  // Fill valid user info and proceed
 
             // Assert that there is no error message during checkout
-            softAssert.assertEquals(getErrorMessage(),"","checkout failed "+getErrorMessage());
+            softAssert.assertEquals(checkout.getErrorMessage(),"","checkout failed "+checkout.getErrorMessage());
 
             // Get the list of items in the cart
-            List<WebElement> cartItems = driver.findElements(By.cssSelector(".cart_list .cart_item"));
+            List<WebElement> cartItems = overview.getCartItems();
 
             // Verify that each item in the cart has the correct name, price, and description
             for (WebElement cartItem : cartItems) {
-                WebElement itemNameElement = cartItem.findElement(By.cssSelector(".inventory_item_name"));
-                String actualName = itemNameElement.getText();
-                WebElement itemPriceElement = cartItem.findElement(By.cssSelector(".inventory_item_price"));
-                String actualPrice = itemPriceElement.getText();
-                WebElement itemDescElement = cartItem.findElement(By.cssSelector(".inventory_item_desc"));
-                String actualDescription = itemDescElement.getText();
+                String actualName = overview.getItemName(cartItem).getText();
+                String actualPrice = overview.getItemPrice(cartItem).getText();
+                String actualDescription = overview.getItemDescription(cartItem).getText();
 
                 // Assert that the product details match for the current item
                 if (actualName.equals(expectedName)) {
@@ -95,7 +98,12 @@ public class OverviewTest extends BaseClass{
 
     @Test(dataProvider = "ValidLoginData")
     public void testTotalPrice(String username, String password) throws IOException {
-        Login(username, password);
+        LoginPage login = new LoginPage(driver);
+        CartPage cart = new CartPage(driver);
+        CheckoutPage checkout = new CheckoutPage(driver);
+        OverviewPage overview = new OverviewPage(driver);
+
+        login.Login(username, password);
 
         // Read the list of products from the JSON file
         JSONArray items = readProductListJson();
@@ -119,20 +127,15 @@ public class OverviewTest extends BaseClass{
             expectedPrice += price;
 
             // Navigate to the shopping cart
-            shopping_Cart_Btn().click();
+            cart.clickShoppingCart();
 
-            checkOut_Btn().click();
-            fillValidInfo();  // Fill valid user info and proceed
+            cart.clickCheckout();
+
+            fillValidInfo(checkout);  // Fill valid user info and proceed
 
             // Get the total price and tax from the summary
-            String totalText = driver.findElement(By.cssSelector(".summary_total_label[data-test='total-label']")).getText();
-            String totalValueText = totalText.replace("Total: $", "").trim();
-
-            double actualTotal = Double.parseDouble(totalValueText);
-
-            String taxText = driver.findElement(By.cssSelector(".summary_tax_label[data-test='tax-label']")).getText();
-            String taxValue = taxText.replace("Tax: $", "").trim();
-            double tax = Double.parseDouble(taxValue);
+            double actualTotal = overview.getTotalPrice();
+            double tax = overview.getTax();
 
             // Calculate the expected total price (price + tax)
             double expectedTotalprice = tax+ expectedPrice;
@@ -148,7 +151,12 @@ public class OverviewTest extends BaseClass{
 
     @Test(dataProvider = "ValidLoginData")
     public void testFinishProcess(String username, String password) throws IOException {
-        Login(username, password);
+        LoginPage login = new LoginPage(driver);
+        CartPage cart = new CartPage(driver);
+        CheckoutPage checkout = new CheckoutPage(driver);
+        OverviewPage overview = new OverviewPage(driver);
+
+        login.Login(username, password);
 
         // Read the list of products from the JSON file
         JSONArray items = readProductListJson();
@@ -165,18 +173,18 @@ public class OverviewTest extends BaseClass{
             }
 
             // Navigate to the shopping cart
-            shopping_Cart_Btn().click();
+            cart.clickShoppingCart();
 
-            checkOut_Btn().click();
-            fillValidInfo(); // Fill valid user info and proceed
+            cart.clickCheckout();
+            fillValidInfo(checkout); // Fill valid user info and proceed
 
             // Finish the checkout process
-            finish_Btn().click();
+            overview.finishButton().click();
             Assert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/checkout-complete.html");
-            softAssert.assertEquals(complete_Header().getText(),"Thank you for your order!");
+            softAssert.assertEquals(overview.completeHeader().getText(),"Thank you for your order!");
 
             // Go back to the inventory page after completing the purchase
-            back_Home_Btn().click();
+            overview.backHomeButton().click();
             softAssert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
 
         }

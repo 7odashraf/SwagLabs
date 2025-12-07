@@ -1,8 +1,9 @@
 package tests;
 
+import Pages.InventoryPage;
+import Pages.LoginPage;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -18,7 +19,10 @@ public class InventoryTest extends BaseClass {
 
     @Test(dataProvider = "ValidLoginData")
     public void test_Add_Remove_Item(String username, String password) throws IOException {
-        Login(username, password);
+        LoginPage login = new LoginPage(driver);
+        InventoryPage inventory = new InventoryPage(driver);
+
+        login.Login(username, password);
 
         // Read the list of items from a JSON file
         JSONArray items = readProductListJson();
@@ -33,16 +37,14 @@ public class InventoryTest extends BaseClass {
 
             // Try to click on the "Add to Cart" button
             try {
-                WebElement addBtn =driver.findElement(By.id(addToCartId));
-                addBtn.click();
+                inventory.clickAddToCart(addToCartId);
             }catch (NoSuchElementException e ){
                 softAssert.fail( "User : '"+username+"', "+ items.getJSONObject(i).getString("name")+": add to cart button unclickable.");
             }
 
             // Try to click on the "Remove from Cart" button
             try {
-                WebElement removeBtn = driver.findElement(By.id(RemoveFromCartId));
-                removeBtn.click();
+                inventory.clickRemoveFromCart(RemoveFromCartId);
             }catch (NoSuchElementException e ){
                 softAssert.fail("User : '"+username+"', "+ items.getJSONObject(i).getString("name")+": remove form cart button unclickable.");
             }
@@ -51,7 +53,10 @@ public class InventoryTest extends BaseClass {
     }
     @Test(dataProvider = "ValidLoginData")
     public void testInventoryItems(String username, String password) throws IOException {
-        Login(username, password);
+        LoginPage login = new LoginPage(driver);
+        InventoryPage inventory = new InventoryPage(driver);
+
+        login.Login(username, password);
 
         // Read the list of items from a JSON file
         JSONArray items = readProductListJson();
@@ -59,16 +64,16 @@ public class InventoryTest extends BaseClass {
         SoftAssert softAssert = new SoftAssert();
 
         // Find all inventory items on the page
-        List<WebElement> inventoryItems = driver.findElements(By.cssSelector(".inventory_item"));
+        List<WebElement> inventoryItems = inventory.getInventoryItems();
 
         // Iterate through each inventory item and compare its details with the expected values from the JSON
         for (int i = 0; i < inventoryItems.size(); i++) {
             WebElement item = inventoryItems.get(i);
 
             // Extract item details from the page
-            String itemName = item.findElement(By.cssSelector(".inventory_item_name")).getText();
-            String itemDescription = item.findElement(By.cssSelector(".inventory_item_desc")).getText();
-            String itemPrice = item.findElement(By.cssSelector(".inventory_item_price")).getText();
+            String itemName = inventory.getItemName(item);
+            String itemDescription = inventory.getItemDescription(item);
+            String itemPrice = inventory.getItemPrice(item);
 
             // Get the expected product details from the JSON file
             JSONObject product = items.getJSONObject(i);
